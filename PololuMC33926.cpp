@@ -11,10 +11,10 @@ MC33926::MC33926(uint8_t DIR1,uint8_t DIR2, uint8_t PWM, uint8_t SF)
   SF_ = SF;
 }
 #else
-MC33926::MC33926(uint8_t DIR1,uint8_t DIR2, uint8_t PWM, uint8_t SF, uint8_t FB)
+MC33926::MC33926(uint8_t EN1, uint8_t DIR1, uint8_t PWM, uint8_t SF, uint8_t FB)
 {
+  EN1_ = EN1;
   DIR1_ = DIR1;
-  DIR2_ = DIR2;
   PWM_ = PWM;
   SF_ = SF;
   FB_ = FB;
@@ -24,8 +24,10 @@ MC33926::MC33926(uint8_t DIR1,uint8_t DIR2, uint8_t PWM, uint8_t SF, uint8_t FB)
 void MC33926::init()
 {
   // Initializes the pins
+  pinMode(EN1_,OUTPUT);
+  digitalWrite(EN1_, HIGH);
   pinMode(DIR1_,OUTPUT);
-  pinMode(DIR2_,OUTPUT);
+  //pinMode(DIR2_,OUTPUT);
   pinMode(PWM_,OUTPUT);
   pinMode(SF_,INPUT);
   #if defined(__MK20DX128__) || defined(__MK20DX256__)

@@ -11,7 +11,7 @@ class MC33926
     // Teensy 3.X and Arduino Due analog pins cannot take 5V
     MC33926(uint8_t DIR1, uint8_t DIR2,uint8_t PWM, uint8_t SF);
     #else
-    MC33926(uint8_t DIR1, uint8_t DIR2,uint8_t PWM, uint8_t SF, uint8_t FB);
+    MC33926(uint8_t EN, uint8_t DIR1, uint8_t PWM, uint8_t SF, uint8_t FB);
     #endif
     // Public functions
     void init();  // Initializes the pins
@@ -24,8 +24,8 @@ class MC33926
 
   private:
     // Private pin variables
+    uint8_t EN_;
     uint8_t DIR1_;
-    uint8_t DIR2_;
     uint8_t PWM_;
     uint8_t SF_;
     #if !defined(__MK20DX128__) || !defined(__MK20DX256__) || !defined(_SAM3XA_)
