@@ -1,4 +1,5 @@
-#include "PololuMC33926.h"
+# 1 "/home/ubuntu/Arduino/PololuMC33926MotorDriver/examples/dual_motors/dual_motors.ino"
+# 2 "/home/ubuntu/Arduino/PololuMC33926MotorDriver/examples/dual_motors/dual_motors.ino" 2
 
 // // NOTE: Pins are for Teensy 3.X
 // MC33926 left_motor(2,3,5,4);
@@ -20,7 +21,7 @@ void setup()
 
 void loop()
 {
-  if(!left_motor.fault()  || !right_motor.fault() )
+  if(!left_motor.fault() || !right_motor.fault() )
   {
     // for (int x = 0; x < 256;x++)
     for (int x = 255; x > 80; x--)
@@ -42,4 +43,3 @@ void loop()
     }
   }
 }
-

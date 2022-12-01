@@ -1,0 +1,8 @@
+{
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "programmer": "arduino:avrispmkii",
+    "port": "/dev/ttyACM0",
+    "output": "build",
+    "sketch": "examples/dual_motors/dual_motors.ino"
+}

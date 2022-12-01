@@ -1,0 +1,22 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/opt/arduino-1.8.19/hardware/arduino/avr/cores/arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/opt/arduino-1.8.19/hardware/arduino/avr/variants/mega"
+  },
+  {
+    "Sourcefile": "/home/ubuntu/Arduino/PololuMC33926MotorDriver/build/sketch/dual_motors.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/ubuntu/Arduino/PololuMC33926MotorDriver/build/sketch/PololuMC33926.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
